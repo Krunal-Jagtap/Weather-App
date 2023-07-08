@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  filter: brightness(85%);
+  background: linear-gradient(-45deg, #d28871, #42a564, #351a70, #5fdae1);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.main-container {
+  position: relative;
+  width: 350px;
+  height: 450px;
+  background-color: rgba(241, 228, 228, 0.25);
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 15px;
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  z-index: 10000;
+  transition-duration: 0.3s;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+form input {
+  width: 60%;
+  height: 90%;
+  padding: 0 10px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
+  transition-duration: 0.2s;
+  color: white;
+  font-size: 1rem;
+}
+
+form input:focus {
+  border-bottom: 1.5px solid white;
+}
+form input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+form button {
+  height: 100%;
+  padding: 0 15px;
+  cursor: pointer;
+  margin: 0 0 5px;
+  background-color: transparent;
+  border: 1px inset white;
+  border-radius: 5px;
+  transition-duration: 0.2s;
+  color: white;
+  font-weight: bolder;
+}
+
+form button:active {
+  scale: 0.9;
+}
+
+.inner-container {
+  width: 100%;
+  height: 60%;
+  margin: 20px 0;
+}
+
+.city-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.city-name {
+  font-size: 30px;
+}
+.weather-condition {
+  font-size: 18px;
+}
+
+.temp-container {
+  width: 100%;
+  height: calc(100% - 100px);
+}
+.weather-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp {
+  font-size: 50px;
+  text-align: center;
+}
+.minmax {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.min,
+.max {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
+}
+.min {
+  border-right: 1px solid white;
+}
+.max {
+  border-left: 1px solid white;
+}
+
+.Weather-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-duration: 0.2s;
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and (max-width: 400px) {
+  .main-container {
+    width: 90%;
+  }
+}
